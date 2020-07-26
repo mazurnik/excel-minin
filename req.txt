@@ -1,0 +1,11 @@
+webpack (imports/exsports)
+    babel
+    scss
+    eslint - чистота js кода
+    2 Modes
+        -dev
+            dev server, sourceMaps, eslint, not minified js & css
+        -prod
+            minified code
+
+git
