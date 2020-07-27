@@ -7,5 +7,9 @@ webpack (imports/exsports)
             dev server, sourceMaps, eslint, not minified js & css
         -prod
             minified code
+    plugins:
+        CopyWebpackPlugin - чтобы фавиконку перетаскивать
+        HtmlWebpackPlugin
+        clean-webpack-plugin
 
 git
