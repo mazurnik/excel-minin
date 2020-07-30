@@ -11,5 +11,8 @@ webpack (imports/exsports)
         CopyWebpackPlugin - чтобы фавиконку перетаскивать
         HtmlWebpackPlugin
         clean-webpack-plugin
-
+        cross-env - плагин для определения системы и внедерения в нее сист переменной NODE_ENV для определения режима разработки
+        devtool: isDev ? "source-map" : false, - добавляет ориигенальные исходники чтобы на нам лучше было взаимодействовать (появятся map файлы в папке bild)
+        devServer - в package.json меняем start и добавляем --open - открывает по умолчанию в браузере
+         entry: ["@babel/polyfill", "./index.js"], - теперь работатют асинк-авэйты
 git
