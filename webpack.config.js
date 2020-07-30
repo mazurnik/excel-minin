@@ -13,14 +13,17 @@ const filename = ext => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`);
 
 const jsLoaders = () => {
   const loaders = [{
-    loader: "babel-loader",
+    loader: 'babel-loader',
     options: {
-      presets: ["@babel/preset-env"],
-    },
+      presets: ['@babel/preset-env']
+    }
   }];
+
   if (isDev) {
-    loaders.push("eslint-loader");
+    loaders.push('eslint-loader');
   }
+
+  return loaders;
 };
 
 module.exports = {
@@ -80,9 +83,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          jsLoaders,
-        },
+        use: jsLoaders()
       },
     ],
   },
