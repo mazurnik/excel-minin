@@ -12,8 +12,17 @@
         "max-len": "off",
         "eol-last": "off",
         "comma-dangle": "off",
-        "arrow-parens": "off"
-        // "no-undef": "off"
+        "arrow-parens": "off",
+        "arraysInObjects": "false",
+        "objectsInObjects": "false",
+        "FunctionDeclaration": "true",
+        "MethodDefinition": "off",
+        "ClassDeclaration": "off",
+        "ArrowFunctionExpression": "off",
+        "FunctionExpression": "off"
     },
-    "extends": ["eslint:recommended", "google"]
+    "extends": [
+        "eslint:recommended",
+        "google"
+    ]
 }
