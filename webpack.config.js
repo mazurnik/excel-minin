@@ -15,7 +15,8 @@ const jsLoaders = () => {
   const loaders = [{
     loader: 'babel-loader',
     options: {
-      presets: ['@babel/preset-env']
+      presets: ['@babel/preset-env'],
+      plugins: ['@babel/plugin-proposal-class-properties']
     }
   }];
 
@@ -67,24 +68,24 @@ module.exports = {
   ],
   module: {
     rules: [{
-        test: /\.s[ac]ss$/i,
-        use: [{
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: isDev,
-              reloadAll: true,
-            },
-          },
-          "css-loader",
-          "sass-loader",
-        ],
+      test: /\.s[ac]ss$/i,
+      use: [{
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          hmr: isDev,
+          reloadAll: true,
+        },
       },
+        "css-loader",
+        "sass-loader",
+      ],
+    },
 
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: jsLoaders()
-      },
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: jsLoaders()
+    },
     ],
   },
 };
